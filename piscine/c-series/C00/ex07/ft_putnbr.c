@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
 // test code
 #include <stdio.h>
 #include <limits.h>
@@ -24,7 +23,6 @@ int main()
     printf("\n");
     ft_putnbr(INT_MIN);
 }
-*/
 
 #include <unistd.h>
 void	ft_putchar(char c)

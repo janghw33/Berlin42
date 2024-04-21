@@ -1,1 +1,1 @@
-CMakeLists.txt not found in /home/jhyeongw/Subjects Select CMakeLists.txt
+\\wsl.localhost\Ubuntu\home\janghw\berlin42에서 CMakeLists.txt을(를) 찾을 수 없습니다 CMakeLists.txt 선택
