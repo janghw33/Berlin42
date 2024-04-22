@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aa.c                                               :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: jhyeongw <jhyeongw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:19:41 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/21 20:29:23 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/04/22 20:12:38 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ int     main(void)
     ft_is_negative(INT_MIN);
     ft_is_negative(INT_MAX);
 }*/
-
-void    ft_is_negative(int n)
+void	ft_is_negative(int n)
 {
-    if (n < 0)
-        ft_putchar('N');
-    else ft_putchar('P');
+	if (n < 0)
+		ft_putchar('N');
+	else
+		ft_putchar('P');
 }

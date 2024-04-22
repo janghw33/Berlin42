@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 00:14:36 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/21 19:19:05 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:57:09 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 // 	ft_print_numbers();
 // }
 
-void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
 	unsigned char	c;
 

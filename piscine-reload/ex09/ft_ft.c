@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: jhyeongw <jhyeongw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 20:29:35 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/21 20:43:33 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/04/22 20:13:18 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ int main(void)
     printf("%d", *nbr);
     return 0;
 }*/
-
-void ft_ft(int *nbr)
+void	ft_ft(int *nbr)
 {
-    *nbr = 42;
+	*nbr = 42;
 }
