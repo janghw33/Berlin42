@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhyeongw <jhyeongw@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 21:46:34 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 22:10:30 by jhyeongw         ###   ########.fr       */
+/*   Created: 2024/04/24 22:29:55 by jhyeongw          #+#    #+#             */
+/*   Updated: 2024/04/24 22:37:13 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,9 @@
 /* ************************************************************************** */
 
 // created by JangHW on 2024-04-24 19:15
- #define ABS(Value) ((Value < 0) ? (-Value) : (Value))
+#ifndef FT_ABS_H
+# define FT_ABS_H
+
+# define ABS(Value) (Value * ((Value < 0) * -1 + (Value > 0)))
+
+#endif

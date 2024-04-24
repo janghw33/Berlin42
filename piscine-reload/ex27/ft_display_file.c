@@ -6,59 +6,50 @@
 /*   By: jhyeongw <jhyeongw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:05:41 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 22:08:29 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/04/24 22:28:31 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-04-24 21:05
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 #include <unistd.h>
-#define BUF_SIZE 10
+#include <fcntl.h>
 
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-
-int	errors(int ac)
+void	ft_putstr(char *str)
 {
-	if (ac < 2)
+	int	a;
+
+	a = 0;
+	while (str[a] != '\0')
+	{
+		write(1, &str[a], 1);
+		a++;
+	}
+}
+
+int	main(int argc, char **argv)
+{
+	int		fd;
+	char	buf[1];
+
+	if (argc == 1)
 	{
 		ft_putstr("File name missing.\n");
 		return (0);
 	}
-	if (ac > 2)
+	if (argc > 2)
 	{
 		ft_putstr("Too many arguments.\n");
 		return (0);
 	}
-	return (1);
-}
-
-char	recupbuf(char **av)
-{
-	int	fd;
-	int	ret;
-	char	buf [BUF_SIZE + 1];
-
-	fd = open(av[1], O_RDONLY);
-	while ((ret = read(fd, buf, BUF_SIZE)))
+	fd = open(argv[1], O_RDONLY);
+	if (fd == -1)
 	{
-		buf[ret] = '\0';
-		ft_putstr(buf);
-	}
-	if (close(fd) == -1)
-	{
-		ft_putstr("close() error");
-		return (1);
-	}
-	return (0);
-}
-
-int	main(int ac, char **av)
-{
-	if (errors(ac) == 0)
+		ft_putstr("Cannot read file.\n");
 		return (0);
-	recupbuf(av);
+	}
+	while (read(fd, buf, 1) != 0)
+	{
+		write(1, buf, 1);
+	}
+	close(fd);
 	return (0);
 }
