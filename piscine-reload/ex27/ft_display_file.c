@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_read.c                                          :+:      :+:    :+:   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: jhyeongw <jhyeongw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:05:41 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 21:52:55 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/04/24 22:08:29 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
 
-int		errors(int ac)
+int	errors(int ac)
 {
 	if (ac < 2)
 	{
@@ -37,9 +37,9 @@ int		errors(int ac)
 
 char	recupbuf(char **av)
 {
-	int fd;
-	int ret;
-	char buf [BUF_SIZE + 1];
+	int	fd;
+	int	ret;
+	char	buf [BUF_SIZE + 1];
 
 	fd = open(av[1], O_RDONLY);
 	while ((ret = read(fd, buf, BUF_SIZE)))
@@ -55,7 +55,7 @@ char	recupbuf(char **av)
 	return (0);
 }
 
-int		main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	if (errors(ac) == 0)
 		return (0);
