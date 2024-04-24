@@ -1,44 +1,25 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   mfile.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 20:13:31 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 20:13:33 by jhyeongw         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+NAME = libft.a
 
-SRC		= ./srcs/ft_putchar.c ./srcs/ft_swap.c ./srcs/ft_putstr.c ./srcs/ft_strlen.c ./srcs/ft_strcmp.c
+SRCS = ./srcs/*.c
 
-OBJS	= ${SRC:.c=.o}
+INCLUDES = ./includes/*.h
 
-HEAD	= ./includes/ft.h
+OBJECTS = ./*.o
 
-NAME	= libft.a
+GCC = gcc -Wall -Werror -Wextra
 
-AR		= ar rc
+AR = ar -rc
 
-LIB		= ranlib
+all : $(NAME)
 
-CC		= cc
+$(NAME) :
+	$(GCC) -c $(SRCS) -I $(INCLUDES)
+	$(AR) $(NAME) $(OBJECTS)
 
-CFLAGS	= -Wall -Wextra -Werror
+clean :
+	/bin/rm -Rf $(OBJECTS)
 
-all:	${NAME}
+fclean : clean
+	/bin/rm -Rf $(NAME)
 
-.c.o:
-	${CC} ${CFLAGS} -c -I ${HEAD} $< -o ${<:.c=.o}
-
-${NAME}:	${OBJS}
-			${AR} ${NAME} ${OBJS}
-			${LIB} ${NAME}
-
-clean:
-	rm -f ${OBJS}
-
-fclean:	clean
-		rm -f ${NAME}
-
-re:		fclean all
+re : fclean all

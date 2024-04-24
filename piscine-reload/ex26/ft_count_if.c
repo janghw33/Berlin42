@@ -1,37 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 20:10:53 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 20:11:41 by jhyeongw         ###   ########.fr       */
+/*   Created: 2024/04/24 20:45:39 by jhyeongw          #+#    #+#             */
+/*   Updated: 2024/04/24 21:02:07 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-04-24 20:10
+// created by JangHW on 2024-04-24 20:45
 
-int	ft_strcmp(char	*s1, char	*s2)
+int	ft_count_if(char **tab, int (*f)(char*))
 {
-	unsigned int	i;
+	int	i;
+	int	counter;
 
 	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i])
+	counter = 0;
+	while (tab[i] != 0)
 	{
+		if (f(tab[i]))
+			counter++;
 		i++;
 	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	return (counter);
 }
-
 /*
 #include <stdio.h>
 
-int main (void)
-{
-	char str1[] = "a";
-	char str2[] = "cc";
-	int test = ft_strcmp(str1, str2);
+int starts_with_h(char *str) {
+	if (str[0] == 'a' || str[0] == 'A') {
+		return 1;
+	} else {
+		return 0;
+	}
+}
 
-	printf("%d < 0?\n", test);
-}*/
+int main() {
+	char *words[] = {"hello", "world", 0};
+
+	printf("Words that start with 'a': %d\n",
+ ft_count_if(words, &starts_with_h));
+
+	return 0;
+} */
