@@ -1,45 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 21:49:39 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 21:09:44 by jhyeongw         ###   ########.fr       */
+/*   Created: 2024/04/24 20:42:46 by jhyeongw          #+#    #+#             */
+/*   Updated: 2024/04/24 21:10:22 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-04-22 21:49
+// created by JangHW on 2024-04-24 20:42
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str)
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (i < length)
 	{
-		ft_putchar(str[i]);
+		f(tab[i]);
 		i++;
 	}
 }
-
 /*
-
-#include <unistd.h>
 #include <stdio.h>
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
+
+void print_square(int n) {
+	printf("%d ", n * n);
 }
 
 int main() {
-	char *test_string = "Hello, world!";
+	int arr[] = {1, 2, 3, 4, 5};
+	int length = sizeof(arr) / sizeof(arr[0]);
 
-	printf("Expected Output: %s\n", test_string);
-	printf("Actual Output: \n");
-	ft_putstr(test_string);
+	printf("Original array: ");
+	for (int i = 0; i < length; i++) {
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+
+	printf("Squares of elements: ");
+	ft_foreach(arr, length, &print_square);
+	printf("\n");
+
 	return 0;
-}*/
+} */

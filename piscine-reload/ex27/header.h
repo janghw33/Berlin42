@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   header.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 20:10:53 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 20:15:25 by jhyeongw         ###   ########.fr       */
+/*   Created: 2024/04/24 21:06:44 by jhyeongw          #+#    #+#             */
+/*   Updated: 2024/04/24 21:06:45 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-04-24 20:10
+// created by JangHW on 2024-04-24 21:06#ifndef BERLIN42_HEADER_H
+#ifndef HEADER_H
+# define HEADER_H
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <unistd.h>
 
-int	ft_strlen(char	*str)
-{
-	int	i;
+void	ft_read(char *argv);
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#endif

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-04-24 19:46#ifndef BERLIN42_FT_POINT_H
+// created by JangHW on 2024-04-24 19:46
 #ifndef FT_POINT_H
 # define FT_POINT_H
 

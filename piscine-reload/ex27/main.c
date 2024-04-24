@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 20:10:53 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 20:11:06 by jhyeongw         ###   ########.fr       */
+/*   Created: 2024/04/24 21:07:08 by jhyeongw          #+#    #+#             */
+/*   Updated: 2024/04/24 21:10:07 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-04-24 20:10
+// created by JangHW on 2024-04-24 21:07
 
-#include <unistd.h>
+#include "header.h"
 
-void	ft_putchar(char c)
+int	main(int argc, char **argv)
 {
-	write(1, &c, 1);
+	if (argc < 2)
+	{
+		write(1, "File name missing.\n", 19);
+		return (0);
+	}
+	else if (argc > 2)
+	{
+		write(1, "Too many arguments.\n", 20);
+		return (0);
+	}
+	else
+		ft_read(argv[1]);
+	return (0);
 }

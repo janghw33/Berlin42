@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_read.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 20:10:53 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 20:11:21 by jhyeongw         ###   ########.fr       */
+/*   Created: 2024/04/24 21:05:41 by jhyeongw          #+#    #+#             */
+/*   Updated: 2024/04/24 21:05:50 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-04-24 20:10
+// created by JangHW on 2024-04-24 21:05
 
-#include <unistd.h>
+#include "header.h"
 
-void	ft_putstr(char *str)
+void	ft_read(char *argv)
 {
-	while (*str != '\0')
-	{
-		write(1, str, 1);
-		str++;
-	}
+	int		fd;
+	char	c;
+
+	fd = open(argv, O_RDONLY);
+	if (fd == -1)
+		return ;
+	while (read(fd, &c, 1) == 1)
+		write(1, &c, 1);
+	close(fd);
 }
