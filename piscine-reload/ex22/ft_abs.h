@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: jhyeongw <jhyeongw@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 19:15:46 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 21:08:57 by jhyeongw         ###   ########.fr       */
+/*   Created: 2024/04/24 21:29:08 by jhyeongw          #+#    #+#             */
+/*   Updated: 2024/04/24 21:29:21 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
