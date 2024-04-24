@@ -11,29 +11,17 @@
 # **************************************************************************** #
 
 
-
 NAME = ft_display_file
 
-SRCS = ./*.c
+SRC = ft_display_file.c \
+	  function.c
 
-OBJECTS = ./*.o
+all: $(NAME)
 
-HEADER = ./*.h.gch
+$(NAME):
+	gcc -Wall -Wextra -Werror -o $(NAME) $(SRC)
 
-INCLUDE = ./*.h
+clean:
 
-GCC = gcc -Wall -Werror -Wextra
-
-all : $(NAME)
-
-$(NAME) :
-	$(GCC) -c $(SRCS) $(INCLUDE)
-	$(GCC) $(OBJECTS) -o $(NAME)
-
-clean :
-	/bin/rm -Rf $(OBJECTS) $(HEADER)
-
-fclean : clean
-	/bin/rm -Rf $(NAME)
-
-re : fclean all
+fclean: clean
+	rm -rf $(NAME)

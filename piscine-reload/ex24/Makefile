@@ -12,26 +12,32 @@
 
 NAME = libft.a
 
-SRCS = ./srcs/*.c
+SRC = ./srcs/ft_putchar.c \
+	  ./srcs/ft_putstr.c \
+	  ./srcs/ft_strcmp.c \
+	  ./srcs/ft_strlen.c \
+	  ./srcs/ft_swap.c
 
-INCLUDES = ./includes/*.h
+SRC1 = ft_putchar.o \
+	   ft_putstr.o \
+	   ft_strcmp.o \
+	   ft_strlen.o \
+	   ft_swap.o
 
-OBJECTS = ./*.o
+INCLUDES = ./includes/
 
-GCC = gcc -Wall -Werror -Wextra
+all: $(NAME)
 
-AR = ar -rc
+create0:
+	gcc -c $(SRC)
 
-all : $(NAME)
+$(NAME): create0
+	ar -rc $(NAME) $(SRC1)
 
-$(NAME) :
-	$(GCC) -c $(SRCS) -I $(INCLUDES)
-	$(AR) $(NAME) $(OBJECTS)
+clean:
+	rm -rf $(SRC1)
 
-clean :
-	/bin/rm -Rf $(OBJECTS)
+fclean: clean
+	rm -rf $(NAME)
 
-fclean : clean
-	/bin/rm -Rf $(NAME)
-
-re : fclean all
+re: fclean all

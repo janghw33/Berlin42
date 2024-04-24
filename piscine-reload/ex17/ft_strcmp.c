@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:33:29 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/23 15:54:26 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/04/24 21:55:40 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,20 @@
  	to 4.3 billion, the difference of 5 seems relatively insignificant
  	and could lead to a misunderstanding that the function is working correctly.
  */
-int	ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(char *s1, char *s2)
 {
-	while (*s1 || *s2)
-	{
-		if (*s1 != *s2)
-		{
-			return (*s1 - *s2);
-		}
-		*s1++;
-		*s2++;
-	}
-	return (0);
-}
+	int i;
 
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0')
+	{
+		while (s1[i] == s2[i])
+			i++;
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+	}
+	return (s1[i] - s2[i]);
+}
 //#include <stdio.h>
 //int main()
 //{
