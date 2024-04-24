@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:19:41 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/22 20:12:38 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/04/22 22:09:52 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ int     main(void)
     ft_is_negative(INT_MIN);
     ft_is_negative(INT_MAX);
 }*/
+
+void	ft_putchar(char c);
+
 void	ft_is_negative(int n)
 {
 	if (n < 0)
