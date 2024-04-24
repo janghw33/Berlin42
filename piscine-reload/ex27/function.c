@@ -6,27 +6,27 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:07:08 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 21:10:07 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/04/24 21:51:39 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // created by JangHW on 2024-04-24 21:07
 
-#include "header.h"
+#include <unistd.h>
 
-int	main(int argc, char **argv)
+void	ft_putchar(char c)
 {
-	if (argc < 2)
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		write(1, "File name missing.\n", 19);
-		return (0);
+		ft_putchar(str[i]);
+		i++;
 	}
-	else if (argc > 2)
-	{
-		write(1, "Too many arguments.\n", 20);
-		return (0);
-	}
-	else
-		ft_read(argv[1]);
-	return (0);
 }
