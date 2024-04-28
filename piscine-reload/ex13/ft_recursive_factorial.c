@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-04-21 22:29
-/*
 #include <stdio.h>
 
 int ft_recursive_factorial(int nb);
@@ -19,7 +17,7 @@ int ft_recursive_factorial(int nb);
 int main()
 {
     printf("%d", ft_recursive_factorial(5));
-}*/
+}
 
 int	ft_recursive_factorial(int nb)
 {
