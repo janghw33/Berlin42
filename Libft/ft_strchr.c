@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 23:03:44 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/27 23:59:20 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/04/28 17:59:48 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*ptr;
+	char	*str;
+	int	i;
 
-	ptr = (char*)s;
-	while (*ptr) {
-		if (*ptr == c)
-			return (ptr);
+	str = (char*)s;
+	i = 0;
+	while (str[i]) {
+		if (str[i] == c)
+			return (str + i);
+		i++;
 	}
 	if (c == '\0')
-		return (ptr);
+		return (str);
 	return (NULL);
 }
 
@@ -33,7 +36,7 @@ char	*ft_strchr(const char *s, int c)
 #include <ctype.h>
 
 int main() {
-	const char *str = "abaDJKCHN#@R*D*a";
+	const char *str = "abR*D*a";
 	for (int i = 0; i < 130; i++) {
 		if (isprint(i)) { // Check if character is printable
 			printf(" %d. %c", i, (char)i); // Print character representation
@@ -41,7 +44,7 @@ int main() {
 			if (result != NULL) {
 				printf(" result: %s\n", result); // Print substring from result to end of string
 			} else {
-				printf(" result: Not found\n"); // Print "Not found" if character not found
+				printf("\n"); // Print "Not found" if character not found
 			}
 		}
 	}
