@@ -1,51 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 18:46:26 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/01 19:20:42 by jhyeongw         ###   ########.fr       */
+/*   Created: 2024/05/01 19:10:28 by jhyeongw          #+#    #+#             */
+/*   Updated: 2024/05/01 20:19:04 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-05-01 18:46
+// created by JangHW on 2024-05-01 19:10
 
 #include "libft.h"
-#include "ft_strlen.c"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
+	size_t 	j;
 
 	i = 0;
-	if (size != 0)
+	j = 0;
+	while (dest[++i]);
+	while(src[j] && (i < size))
 	{
-		while (src[i] && (i < size -1) )
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
+		dest[i++] = src[j++];
 	}
-	return ft_strlen(src);
+	dest[i - 1] = '\0';
+	return i;
 }
 
-#include <stdio.h>
 #include <string.h>
 
 int main() {
-	char dest[5] = "aaa";
-	char src[] = "bbbbb";
+//	char dest[5] = "aaa";
+//	const char src[] = "bbbbb";
 
 	char a[5] = "aaa";
-	char b[] = "bbbb";
+	const char b[] = "bbbb";
 
-	strncpy(dest, src, 3);
-	printf("%s\n", dest);
+//	strncat(dest, src, 3);
+//	printf("%s\n", dest);
 
-	ft_strlcpy(a, b, 3);
+
+	printf("%zu\n", ft_strlcat(a, b, 3));
 	printf("%s\n", a);
 
 	return 0;
