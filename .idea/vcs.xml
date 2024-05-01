@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Libft/libftTest" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/piscine-reload" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/piscine-reload/ex00" vcs="Git" />
   </component>
