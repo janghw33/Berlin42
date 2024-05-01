@@ -1,4 +1,4 @@
-# BERLIN
+# BERLIN42
 
 This repo is from school 42 based on Linux and C, includes problems and solutions that help in understanding the C language.
 Each top-level folder contains a single PDF with several assignments.
