@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 19:32:08 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/28 20:41:35 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/01 18:44:24 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ int main()
 	memset(s,123,sizeof(s));
 	ft_memset(arr,17,sizeof(arr));
 	for ( int i = 0; i < 10; i++)
-	printf("%i ", arr[i]);
+	printf("%i ", s[i]);
 
 	return 0;
 };
-*/
 
+*/
 
