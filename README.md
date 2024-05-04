@@ -12,7 +12,8 @@ Each top-level folder contains a single PDF with several assignments.
 # My progress
 |Circle | Project | Language | Description | Score | 
 |:-----:|:-------:|:--------:|:-----------:|:-----:|
-|00| [PISCINE]| C | C Entry for 42 projects | 0% |
+|00| [PISCINE]| C | Entry for Acception | 0% |
+|00| [PISCINE-Reloaded]| C | remind before beginning | 100% |
 |00| [Libft]| C | C library for 42 projects | 0% |
 |01| [ft_printf]| C | Recode Printf | 0% |
 |01| [Get Next Line] | C | Function that returns a line, read from a file descriptor. | 0% |
