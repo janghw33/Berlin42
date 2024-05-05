@@ -3,13 +3,6 @@
 This repo is from school 42 based on Linux and C, includes problems and solutions that help in understanding the C language.
 Each top-level folder contains a single PDF with several assignments.
 
-- **PISCINE** :
-  Contains projects related to the Linux environment, file system management.
-- **CURSUS** :
-  there are projects including 3~10 exercises that range from basic to implementing important C library functions and complex algorithm implementations.
-
-
-# My progress
 |Circle | Project | Language | Description | Score | 
 |:-----:|:-------:|:--------:|:-----------:|:-----:|
 |00| [PISCINE]| C | Entry for Acception | 0% |
