@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/27 22:25:01 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/05 22:59:22 by jhyeongw         ###   ########.fr       */
+/*   Created: 2024/05/05 20:59:25 by jhyeongw          #+#    #+#             */
+/*   Updated: 2024/05/05 22:59:51 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-04-27 22:25
+// created by JangHW on 2024-05-05 20:59
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strdup(const char *src)
 {
-	size_t length;
+	size_t	size;
+	char	*dest;
 
-	length = 0;
-	while (s[length++]);
-	return (length - 1);
+	size = ft_strlen(src);
+	dest = (char *)malloc(size * sizeof(char) + 1);
+	if (dest == NULL)
+		return (0);
+	ft_memcpy(dest, src, size);
+	dest[size] = '\0';
+	return (dest);
 }
+#include <stdio.h>
+int main()
+{
+	char *a = "abcde";
+	printf("%s", ft_strdup(a));
 
-//#include <stdio.h>
-//int main()
-//{
-//	printf("%zu", ft_strlen("he3213ll%@#%"));
-//}
-
+}
