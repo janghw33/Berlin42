@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/27 22:25:01 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/05 22:59:22 by jhyeongw         ###   ########.fr       */
+/*   Created: 2024/05/05 21:51:35 by jhyeongw          #+#    #+#             */
+/*   Updated: 2024/05/05 22:04:05 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-04-27 22:25
+// created by JangHW on 2024-05-05 21:51
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s)
+#include <stdlib.h>
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t length;
+	char *dest;
+	int i;
 
-	length = 0;
-	while (s[length++]);
-	return (length - 1);
+	dest = (char *)malloc(len * sizeof(char));
+	if (!dest)
+		return (NULL);
+
+	i = 0;
+	while (s[start +i])
+	{
+		dest[i] = s[start + i];
+		i++;
+	}
+
+	return dest;
 }
 
-//#include <stdio.h>
-//int main()
-//{
-//	printf("%zu", ft_strlen("he3213ll%@#%"));
-//}
-
+int main()
+{
+	char a[6] = "abcdef";
+	printf("%s", ft_substr(a,3,5));
+}
