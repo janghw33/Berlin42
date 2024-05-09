@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhyeongw <jhyeongw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 14:33:29 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/24 22:58:07 by jhyeongw         ###   ########.fr       */
+/*   Created: 2024/04/21 22:29:10 by jhyeongw          #+#    #+#             */
+/*   Updated: 2024/04/22 20:20:17 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// created by JangHW on 2024-04-23 14:33
+// created by JangHW on 2024-04-21 22:29
+/*
+#include <stdio.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int ft_recursive_factorial(int nb);
+
+int main()
 {
-	while (*s1 != '\0' && (*s1 == *s2))
-	{
-		s1++;
-		s2++;
-	}
-	return (*(unsigned char *) s1 - *(unsigned char *) s2);
-}
+    printf("%d", ft_recursive_factorial(5));
+}*/
 
-//#include <stdio.h>
-//int main()
-//{
-//	printf("%d", ft_strcmp("aaaa", "aaac"));
-//}
+int	ft_recursive_factorial(int nb)
+{
+	if ((nb < 0) || (nb > 12))
+		return (0);
+	else if (nb == 0)
+		return (1);
+	else
+		return (nb * ft_recursive_factorial(nb - 1));
+}
