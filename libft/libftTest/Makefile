@@ -17,7 +17,7 @@ ifeq ($(UNAME), Linux)
 	VALGRIND = valgrind -q --leak-check=full
 endif
 ifeq ($(IN_DOCKER),TRUE)
-	LIBFT_PATH = /project/
+	LIBFT_PATH = /project
 endif
 
 $(MANDATORY): %: mandatory_start
