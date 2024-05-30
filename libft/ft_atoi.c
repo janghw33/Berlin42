@@ -42,12 +42,12 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-#include <stdio.h>
-#include <stdlib.h>
-int main() {
-	char *str = "-10";
-	int num = ft_atoi(str);
-	printf("String %s %d", str, num);
-	return 0;
-}
+//
+//#include <stdio.h>
+//#include <stdlib.h>
+//int main() {
+//	char *str = "-10";
+//	int num = ft_atoi(str);
+//	printf("String %s %d", str, num);
+//	return 0;
+//}

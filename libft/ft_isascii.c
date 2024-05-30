@@ -6,17 +6,18 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 20:40:20 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/01 17:02:32 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 13:30:48 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // created by JangHW on 2024-04-27 20:40
-
 #include "libft.h"
 
 int	ft_isascii(int c)
 {
-	return (0 <= c && c <= 128);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
 /*
 ascii = 0~127 = unsigned ascii =

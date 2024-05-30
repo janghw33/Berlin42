@@ -6,31 +6,26 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 23:03:44 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/28 17:59:48 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 13:32:36 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // created by JangHW on 2024-04-27 23:03
 
 #include "libft.h"
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*str;
-	int	i;
-
-	str = (char*)s;
-	i = 0;
-	while (str[i]) {
-		if (str[i] == c)
-			return (str + i);
-		i++;
+	while ((char)c != *s)
+	{
+		if (!*s)
+			return (0);
+		s++;
 	}
-	if (c == '\0')
-		return (str);
-	return (NULL);
+	return ((char *)s);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -49,4 +44,4 @@ int main() {
 		}
 	}
 	return 0;
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 18:46:26 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/01 19:20:42 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 14:08:14 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	return ft_strlen(src);
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -50,3 +51,4 @@ int main() {
 
 	return 0;
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 22:25:37 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/05 22:56:14 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 13:47:08 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,32 +16,36 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t len;
-	char *result;
-	int i;
-
-	len = ft_strlen(s1) + ft_strlen(s2);
-	result = (char *)malloc(sizeof(char) * len);
+	char	*new;
+	int		i;
+	int		j;
 
 	i = 0;
-	while(s1[i])
+	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	new = (char *)malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!new)
+		return (NULL);
+	while (s1[i])
 	{
-		result[i] = s1[i];
+		new[i] = s1[i];
 		i++;
 	}
-	i = 0;
-	while(s2[i])
+	while (s2[j])
 	{
-		result[ft_strlen(s1) + i] = s2[i];
+		new[i] = s2[j];
 		i++;
+		j++;
 	}
-	return (result);
+	new[i] = '\0';
+	return (new);
 }
-
-int main()
-{
-	char a[] = "adsadsa";
-	char b[] = "dfsfsd";
-
-	printf("%s",ft_strjoin(a, b));
-}
+//
+//int main()
+//{
+//	char a[] = "adsadsa";
+//	char b[] = "dfsfsd";
+//
+//	printf("%s",ft_strjoin(a, b));
+//}

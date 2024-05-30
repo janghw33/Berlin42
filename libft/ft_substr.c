@@ -6,35 +6,41 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 21:51:35 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/05 22:04:05 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 14:15:32 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // created by JangHW on 2024-05-05 21:51
-
 #include "libft.h"
-#include <stdlib.h>
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *dest;
-	int i;
+	char			*pt;
+	unsigned int	i;
+	size_t			strlen;
 
-	dest = (char *)malloc(len * sizeof(char));
-	if (!dest)
+	if (!s)
 		return (NULL);
-
+	strlen = ft_strlen(s);
+	if ((size_t)start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (start + len > strlen)
+		len = strlen - start;
+	pt = malloc(len + 1);
+	if (!pt)
+		return (NULL);
 	i = 0;
-	while (s[start +i])
+	while (i < len)
 	{
-		dest[i] = s[start + i];
+		pt[i] = *(s + i + start);
 		i++;
 	}
-
-	return dest;
+	pt[i] = '\0';
+	return (pt);
 }
-
-int main()
-{
-	char a[6] = "abcdef";
-	printf("%s", ft_substr(a,3,5));
-}
+//
+//int main()
+//{
+//	char a[6] = "abcdef";
+//	printf("%s", ft_substr(a,3,5));
+//}

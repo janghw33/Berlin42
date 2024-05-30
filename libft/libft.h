@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 20:59:45 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/01 17:58:01 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 13:37:21 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,16 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
 # include <stddef.h>
-# include <unistd.h>
 # include <stdlib.h>
+# include <unistd.h>
 # include <stdio.h>
 
-# define IS_WSPACE(c) (c==' '||c=='\t'||c=='\n'||c=='\r'||c=='\f'||c=='\v')
-# define UCHAR unsigned char
-
-# define CHECK_PTR_DEF(ptr, def) if (!(ptr)) return (def);
-# define CHECK_PTR(ptr) CHECK_PTR_DEF(ptr, NULL);
-# define CHECK_PTR_EMPTY(ptr) if (!(ptr)) return ;
-# define CHECK_MALLOC(var, size) CHECK_PTR((var = malloc(size)))
-
-# define MIN(a, b) (((a) < (b)) ? (a) : (b))
-# define MAX(a, b) (((a) > (b)) ? (a) : (b))
-
-# define HANDLE_UNICODE 1
-
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;
+}			t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
