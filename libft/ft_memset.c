@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 19:32:08 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/01 18:44:24 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 19:10:47 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,17 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *arr;
-	unsigned char	a;
-	int	i;
+	size_t	i;
+	char	*str;
 
-	arr = (unsigned char*) s;
-	a = (unsigned char)c;
 	i = 0;
+	str = s;
 	while (i < n)
 	{
-		arr[i] = a;
+		str[i] = c;
 		i++;
 	}
-	return (arr);
+	return (s);
 }
 
 /*
