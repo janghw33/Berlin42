@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 14:43:52 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/29 21:45:48 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 19:09:35 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,6 @@ char	*ft_itoa(int n)
 	return (s);
 }
 /*
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
