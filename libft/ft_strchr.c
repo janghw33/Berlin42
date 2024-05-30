@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 23:03:44 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/30 13:32:36 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 20:00:01 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,11 @@ char	*ft_strchr(const char *s, int c)
 int main() {
 	const char *str = "abR*D*a";
 	for (int i = 0; i < 130; i++) {
-		if (isprint(i)) { // Check if character is printable
-			printf(" %d. %c", i, (char)i); // Print character representation
+		if (isprint(i)) {
+			printf(" %d. %c", i, (char)i);
 			char *result = ft_strchr(str, i);
 			if (result != NULL) {
-				printf(" result: %s\n", result); // Print substring from result to end of string
-			} else {
-				printf("\n"); // Print "Not found" if character not found
+				printf(" result: %s\n", result);
 			}
 		}
 	}

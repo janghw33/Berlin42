@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 20:40:20 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/30 13:30:48 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 19:59:02 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int	ft_isascii(int c)
 /*
 ascii = 0~127 = unsigned ascii =
 */
-
-
 /*
 
 #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 22:25:01 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/05 22:59:22 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 19:55:11 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen(const char *str)
 {
-	size_t length;
+	int	i;
 
-	length = 0;
-	while (s[length++]);
-	return (length - 1);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
 
 //#include <stdio.h>
@@ -28,4 +29,3 @@ size_t	ft_strlen(const char *s)
 //{
 //	printf("%zu", ft_strlen("he3213ll%@#%"));
 //}
-
