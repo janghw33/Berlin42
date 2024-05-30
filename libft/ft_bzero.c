@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 20:42:04 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/28 21:16:27 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 13:54:08 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr;
-	ptr = (unsigned char *) s;
-	int	i;
-	i = 0;
-	while (i < n)
-	{
-		ptr[i] = '\0';
-		i++;
-	}
-	s = ptr;
+	ft_memset(s, 0, n);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -43,3 +34,4 @@ int main() {
 
 	return 0;
 }
+*/

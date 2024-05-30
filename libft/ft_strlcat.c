@@ -14,37 +14,48 @@
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-	size_t 	j;
+	size_t	s;
+	size_t	d;
+	size_t	di;
+	size_t	si;
 
-	i = 0;
-	j = 0;
-	while (dest[++i]);
-	while(src[j] && (i < size))
+	si = ft_strlen(src);
+	if (!dst && size == 0)
+		return (si);
+	d = ft_strlen(dst);
+	di = d;
+	if (size <= di)
+		return (size + si);
+	s = 0;
+	while (src[s] && d + 1 < size)
 	{
-		dest[i++] = src[j++];
+		dst[d] = src[s];
+		s++;
+		d++;
 	}
-	dest[i - 1] = '\0';
-	return i;
+	dst[d] = 0;
+	return (di + si);
 }
 
-#include <string.h>
-
-int main() {
-//	char dest[5] = "aaa";
-//	const char src[] = "bbbbb";
-
-	char a[5] = "aaa";
-	const char b[] = "bbbb";
-
-//	strncat(dest, src, 3);
-//	printf("%s\n", dest);
-
-
-	printf("%zu\n", ft_strlcat(a, b, 3));
-	printf("%s\n", a);
-
-	return 0;
-}
+//#include <string.h>
+//
+//int main() {
+////	char dest[5] = "aaa";
+////	const char src[] = "bbbbb";
+//
+//	char a[5] = "aaa";
+//	const char b[] = "bbbb";
+//
+////	strncat(dest, src, 3);
+////	printf("%s\n", dest);
+//
+//
+//	printf("%zu\n", ft_strlcat(a, b, 3));
+//	printf("%s\n", a);
+//
+//	return 0;
+//}

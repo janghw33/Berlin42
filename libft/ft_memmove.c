@@ -43,7 +43,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 #include <stdio.h>
 #include <memory.h>
 int main()
@@ -54,3 +54,4 @@ int main()
 	printf("%s\n", memmove(dest, src, 5));
 	printf("%s\n", ft_memmove(dest, src, 5));
 }
+*/

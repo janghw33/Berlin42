@@ -16,26 +16,19 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*str;
 	int	i;
 
-	str = (char*)s;
 	i = 0;
-	while(str[i])
-	{
+	while (s[i])
 		i++;
-	}
-	if (c == '\0')
-		return (str + i);
-	i -= 1;
-	while (str[i]) {
-		if (str[i] == c)
-			return (str + i);
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
 		i--;
 	}
-	return (NULL);
+	return (0);
 }
-
 /*
 
 #include <stdio.h>

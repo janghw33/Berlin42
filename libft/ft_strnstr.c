@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 21:43:41 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/01 23:14:05 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 13:36:21 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,30 @@
 
 #include "libft.h"
 
-char *ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-
-	unsigned char	*a;
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	a = (unsigned char *)str;
-	while (a && to_find[i] && --len > 0)
+	if (!str && !len)
+		return (0);
+	if (to_find[0] == '\0' || to_find == str)
+		return ((char *)str);
+	while (str[i] != '\0')
 	{
 		j = 0;
-		if (a[i] == to_find[0])
+		while (str[i + j] == to_find[j] && (i + j) < len)
 		{
-			while(a[j] == to_find[j] )
-			{
-				if(to_find[j] == '\0')
-				{
-					return ((char *)a);
-				}
-				j++;
-			}
-			i++;
+			if (str[i + j] == '\0' && to_find[j] == '\0')
+				return ((char *)&str[i]);
+			j++;
 		}
-			return a;
+		if (to_find[j] == '\0')
+			return ((char *)(str + i));
+		i++;
 	}
+	return (0);
 }
 //#include <stddef.h>
 //

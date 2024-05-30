@@ -27,10 +27,11 @@ char	*ft_strdup(const char *src)
 	dest[size] = '\0';
 	return (dest);
 }
+/*
 #include <stdio.h>
 int main()
 {
 	char *a = "abcde";
 	printf("%s", ft_strdup(a));
 
-}
+}*/
