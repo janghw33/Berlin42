@@ -6,11 +6,13 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:08:57 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/30 13:05:52 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 19:25:03 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include "ft_strlen.c"
+//#include "ft_strlcpy.c"
 
 static int	ft_check_set(char const c, char const *set)
 {
@@ -54,3 +56,20 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(new, (char *)s1, size + 1);
 	return (new);
 }
+/*
+
+#include <stdio.h>
+
+int main() {
+	char *str = "   hello, world!   ";
+	char *set = " ";
+	char *trimmed_str;
+
+	trimmed_str = ft_strtrim(str, set);
+
+	if (trimmed_str) {
+		printf("Original string: '%s'\n", str);
+		printf("Trimmed string: '%s'\n", trimmed_str);
+	}
+	return 0;
+}*/

@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 21:26:33 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/04/27 22:23:45 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 20:00:16 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@
 
 int	ft_isdigit(int c)
 {
-	return ( '0' <= c && c <= '9');
+	return ('0' <= c && c <= '9');
 }
-
-
 /*#include <stdio.h>
 int	main()
 {

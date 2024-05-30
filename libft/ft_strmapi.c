@@ -6,11 +6,12 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 14:43:52 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/20 14:43:52 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 19:22:51 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include "ft_strlen.c"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned
 int, char))
@@ -34,3 +35,23 @@ int, char))
 	res[i] = '\0';
 	return (res);
 }
+
+//#include <stdio.h>
+//#include <ctype.h>
+//char to_upper(unsigned int i, char c) {
+//	return (char)toupper(c);
+//}
+//
+//int main() {
+//	char *str = "hello, world!";
+//	char *result;
+//
+//	result = ft_strmapi(str, to_upper);
+//
+//	if (result) {
+//		printf("Original string: %s\n", str);
+//		printf("Transformed string: %s\n", result);
+//	}
+//
+//	return 0;
+//}

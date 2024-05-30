@@ -6,7 +6,7 @@
 /*   By: jhyeongw <jhyeongw@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 23:03:44 by jhyeongw          #+#    #+#             */
-/*   Updated: 2024/05/01 18:21:53 by jhyeongw         ###   ########.fr       */
+/*   Updated: 2024/05/30 19:55:39 by jhyeongw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,10 @@
 
 int	ft_tolower(int c)
 {
-	if ( c >= 'A' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
-	return c;
+	return (c);
 }
-
-
 /*#include <stdio.h>
 int	main()
 {
@@ -31,4 +29,3 @@ int	main()
 		printf("return %c \n", ft_tolower(i));
 	}
 }*/
-
