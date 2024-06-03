@@ -6,8 +6,8 @@ Each top-level folder contains a single PDF with several assignments.
 |Circle | Project | Language | Description | Score | 
 |:-----:|:-------:|:--------:|:-----------:|:-----:|
 |00| [PISCINE]| C | Entry for Acception | PASSED |
-|00| [PISCINE-Reloaded]| C | remind before beginning | 100% |
-|00| [Libft]| C | C library for 42 projects | 100% + 25% |
+|00| [PISCINE-Reloaded]| C | remind before beginning | 100/100 |
+|00| [Libft]| C | C library for 42 projects | 125/125 |
 |01| [ft_printf]| C | Recode Printf | 0% |
 |01| [Get Next Line] | C | Function that returns a line, read from a file descriptor. | 0% |
 |01| [Born2beroot] | Network & system Administration | System Administration. | 0% |
